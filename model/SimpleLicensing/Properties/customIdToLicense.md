@@ -1,16 +1,14 @@
 SPDX-License-Identifier: Community-Spec-1.0
 
-# customIdToUri (DEPRECATED)
+# customIdToLicense
 
 ## Summary
 
 Maps a LicenseRef or AdditionRef string for a Custom License or a Custom
-License Addition to its URI ID.
+License Addition to a CustomLicense, a CustomLicenseAddition, or a
+SimpleLicensingText
 
 ## Description
-
-**NOTE** This field is deprecated and only included for backward compatibility.
-New documents should use customIdToLicense instead
 
 Within a License Expression, references can be made to a Custom License or a
 Custom License Addition.
@@ -20,16 +18,12 @@ dictates any reference starting with a
 "LicenseRef-" or "AdditionRef-" refers to license or addition text not found in
 the official [SPDX License List](https://spdx.org/licenses/).
 
-These custom licenses must be a CustomLicense, a CustomLicenseAddition, or a
-SimpleLicensingText which are identified with a unique URI identifier.
-
 The key for the DictionaryEntry is the string used in the license expression
-and the value is the URI for the corresponding CustomLicense,
+and the value is target Element, which must be a CustomLicense,
 CustomLicenseAddition, or SimpleLicensingText.
-
 
 ## Metadata
 
-- name: customIdToUri
+- name: customIdToLicense
 - Nature: ObjectProperty
-- Range: /Core/DictionaryEntry
+- Range: /Core/ElementMap

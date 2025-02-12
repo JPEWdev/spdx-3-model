@@ -39,3 +39,6 @@ license expression as a combination of license objects.
 - customIdToUri
   - type: /Core/DictionaryEntry
   - minCount: 0
+- customIdToLicense
+  - type: /Core/ElementMap
+  - minCount: 0
